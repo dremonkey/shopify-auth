@@ -13,5 +13,5 @@
   "dependencies": {
     "passport": "~0.2.0",
     "passport-shopify": "git://github.com/dremonkey/passport-shopify.git",
-  },
+  }
 }
