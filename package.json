@@ -9,6 +9,20 @@
     "authentication",
     "identity"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dremonkey/shopify-auth.git"
+  },
+  "bugs": {
+    "url": "http://github.com/dremonkey/shopify-auth/issues"
+  },
+  "author": "Andre Deutmeyer",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "main": "lib/index.js",
   "dependencies": {
     "passport": "~0.2.0",
