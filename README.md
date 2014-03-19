@@ -1,4 +1,4 @@
-# Shopify Auth Module
+# Shopify Auth Module for Node
 
 This is a convenience module that provides a method for Basic or OAuth authentication with Shopify.
 

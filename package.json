@@ -1,5 +1,5 @@
 {
-  "name": "node-shopify-auth",
+  "name": "shopify-node-auth",
   "version": "0.0.1",
   "description": "Shopify Auth wrapper. Provide Basic and OAuth authentication methods.",
   "keywords": [
@@ -12,6 +12,6 @@
   "main": "lib/index.js",
   "dependencies": {
     "passport": "~0.2.0",
-    "passport-shopify": "git://github.com/dremonkey/passport-shopify.git",
+    "passport-shopify": "git://github.com/dremonkey/passport-shopify.git"
   }
 }
