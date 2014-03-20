@@ -25,6 +25,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
+    "lodash": "~2.4.1",
     "passport": "~0.2.0",
     "passport-shopify": "git://github.com/dremonkey/passport-shopify.git"
   }
