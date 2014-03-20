@@ -1,5 +1,5 @@
 {
-  "name": "shopify-node-auth",
+  "name": "shopify-auth",
   "version": "0.0.1",
   "description": "Shopify Auth wrapper. Provide Basic and OAuth authentication methods.",
   "keywords": [
