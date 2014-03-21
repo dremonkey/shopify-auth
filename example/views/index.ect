@@ -1,0 +1,82 @@
+<% extend 'layout.ect' %>
+
+<div class="col-sm-offset-3 col-sm-6">
+  <h1 class="page-title">Shopify Auth Example</h1>
+</div>
+
+<form id="config-oauth" class="config-form form-horizontal" action="/" method="POST">
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <h3>OAuth Configurations</h3>
+    </div>
+  </div>
+  <fieldset class="oauth-config">
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">Shop Name</label>
+      <div class="col-sm-4">
+        <input type="text" name="shop" class="form-control" placeholder="Shop" required/>
+      </div>
+    </div>
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">App API Key</label>
+      <div class="col-sm-6">
+        <input type="text" name="apiKey" class="form-control" placeholder="9eb0ab82ebc11b94f8b5d6g5a3810f5e" required/>
+      </div>
+    </div>
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">App Shared Secret</label>
+      <div class="col-sm-6">
+        <input type="text" name="password" class="form-control" placeholder="162pabq9nh9jmabi1082919101lmb1" required/>
+      </div>
+    </div>
+  </fieldset>
+
+  <input type="hidden" name="method" value="oauth"/>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button class="btn btn-primary" data-loading-text="Authorizing...">Test OAuth</button>
+    </div>
+  </div>
+</form>
+
+<form id="config-basic" class="config-form form-horizontal" action="/" method="POST">
+  <fieldset class="oauth-config">
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-9">
+        <h3>Basic Auth Configurations</h3>
+      </div>
+    </div>
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">Shop Name</label>
+      <div class="col-sm-4">
+        <input type="text" name="shop" class="form-control" placeholder="Shop" required/>
+      </div>
+    </div>
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">Private App API Key</label>
+      <div class="col-sm-6">
+        <input type="text" name="apiKey" class="form-control" placeholder="9eb0ab82ebc11b94f8b5d6f5a3810f5e" required/>
+      </div>
+    </div>
+    <div class="config-group form-group">
+      <label class="col-sm-3 control-label">Private App Password</label>
+      <div class="col-sm-6">
+        <input type="text" name="password" class="form-control" placeholder="d55501215dc431a873717bf8b6baf6dc" required/>
+      </div>
+    </div>
+  </fieldset>
+
+  <input type="hidden" name="method" value="basic"/>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button class="btn btn-primary" data-loading-text="Authorizing...">Test Basic Auth</button>
+    </div>
+  </div>
+</form>
+
+<div id="shopinfo" class="col-sm-offset-3 col-sm-6">
+  <h3>Shop Info</h3>
+  <pre></pre>
+</div>

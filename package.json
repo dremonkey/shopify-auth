@@ -28,5 +28,10 @@
     "lodash": "~2.4.1",
     "passport": "~0.2.0",
     "passport-shopify": "git://github.com/dremonkey/passport-shopify.git"
+  },
+  "devDependencies": {
+    "ect": "~0.5.6",
+    "express": "~3.5.0",
+    "request": "~2.34.0"
   }
 }
