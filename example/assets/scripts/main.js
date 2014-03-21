@@ -8,20 +8,22 @@
     
     e.preventDefault();
     btn.button('loading');
-
-    console.log(data);
     
     $.post(url, data, function (data, response) {
       console.log(data, response);
-      // display the data
-      infoBox.text(JSON.stringify(data));
-      btn.button('reset');
+      
+      if (data.redirect) {
+        window.location = data.url
+      }
+      else {
+        infoBox.text(JSON.stringify(data));
+        btn.button('reset');
+      }
     });
   };
 
   $('#config-oauth').submit(function (e) {
     var $form = $(this);
-    console.log($form);
     submitHandler($form, e);
   });
 
