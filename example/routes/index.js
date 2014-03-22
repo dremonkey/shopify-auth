@@ -33,14 +33,16 @@ module.exports = function (server) {
       // 
       // @NOTE 
       // This can be done much earlier. In fact for most use cases, these should be
-      // set at the same time that you initialize OAuth. It is only being done so here
-      // because we need to get the form values, and as a demonstration of how the auth
-      // process can be made dynamic
+      // set at the same time that you initialize OAuth. It is only being done here
+      // because we need to get the form values, and this serves as a demonstration 
+      // of how the auth process can be made dynamic
       oauth.setAuthField('shop', shop);
       oauth.setAuthField('apiKey', apiKey);
       oauth.setAuthField('secret', password);
       oauth.setAuthField('scope', ['read_orders']);
 
+      // Because the initial request is AJAX this tell the client script to redirect.
+      // Client is responsible for changing window.location and following the redirect.
       res.json({
         redirect: true,
         url:'/auth/shopify?shop=' + shop

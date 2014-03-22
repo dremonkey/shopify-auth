@@ -1,6 +1,6 @@
 {
   "name": "shopify-auth",
-  "version": "0.0.3-beta.1",
+  "version": "0.0.3-beta.2",
   "description": "Shopify Auth wrapper. Provide Basic and OAuth authentication methods.",
   "keywords": [
     "passport",
@@ -27,7 +27,8 @@
   "dependencies": {
     "lodash": "~2.4.1",
     "passport": "~0.2.0",
-    "passport-shopify": "git://github.com/dremonkey/passport-shopify.git"
+    "passport-shopify": "git://github.com/dremonkey/passport-shopify.git",
+    "when": "~3.0.1"
   },
   "devDependencies": {
     "ect": "~0.5.6",
