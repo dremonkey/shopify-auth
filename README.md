@@ -39,6 +39,5 @@ auth.getToken().then(function (token) {
   // and 'token' is either your 'access token' for OAuth
   // or a 'username:password' string for Basic authentication
 });
-
 ``` 
 
