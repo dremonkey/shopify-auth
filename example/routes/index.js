@@ -7,7 +7,7 @@ var OAuth = require('../../lib/index').OAuth
 module.exports = function (server) {
 
   // Init OAuth
-  var oauth = OAuth(server);
+  var oauth = new OAuth(server);
 
   // Index Page
   server.get('/', function (req, res) {
