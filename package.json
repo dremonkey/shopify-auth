@@ -1,6 +1,6 @@
 {
   "name": "shopify-auth",
-  "version": "0.0.3-beta.3",
+  "version": "0.0.3-beta.4",
   "description": "Shopify Auth wrapper. Provide Basic and OAuth authentication methods.",
   "keywords": [
     "passport",
