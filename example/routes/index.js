@@ -11,8 +11,29 @@ module.exports = function (server) {
 
   // Index Page
   server.get('/', function (req, res) {
+
+    // Change this value to test Embedded App
+    // 
+    // This loads and initializes the EASDK. If not actually embedded, then
+    // trying to load and initialize the EASDK wil cause problems
+    var isEmbedded = false;
+
     var data = {
-      shopinfo: JSON.stringify(req.session.shop)
+      // Not Embedded App Credentials
+      // apiKey: '7d871311e1c911fdd0e0aa720e3b091f',
+      // secret: '82987f2ebf95ed638947829b0396d27d',
+
+      // Embedded App Credentials
+      apiKey: '9e7ac628cccabda29619d80170e33e51',
+      secret: '3ab24f380dae3f554fc014a94d7af140',
+
+      // Shared
+      shopurl: 'narfs-and-zoinks.myshopify.com',
+      shopinfo: JSON.stringify(req.session.shop),
+
+      // For Embedded Apps
+      isEmbedded: isEmbedded,
+      pageTitle: 'Test'
     };
 
     res.render('index.ect', data);
@@ -41,11 +62,14 @@ module.exports = function (server) {
       oauth.setAuthField('secret', password);
       oauth.setAuthField('scope', ['read_orders']);
 
-      // Because the initial request is AJAX this tell the client script to redirect.
-      // Client is responsible for changing window.location and following the redirect.
+      // Because the initial request is AJAX this tells the client script to redirect.
+      // Client is responsible for changing window.location to follow the redirect and
+      // kickoff the OAuth process
+      var redirectUrl = '/auth/shopify';
+
       res.json({
         redirect: true,
-        url:'/auth/shopify?shop=' + shop
+        url: redirectUrl
       });
     }
 

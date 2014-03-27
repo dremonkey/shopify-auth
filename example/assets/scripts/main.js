@@ -13,6 +13,7 @@
       console.log(data, response);
       
       if (data.redirect) {
+        // This method can be used in place of serving the '/auth/shopify/escape' page
         window.location = data.url
       }
       else {

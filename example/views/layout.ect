@@ -9,6 +9,17 @@
 
     <link type="text/css" rel="stylesheet" href="/styles/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="/styles/main.css">
+
+    <% if @isEmbedded: %>
+    <script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+    <script>
+      ShopifyApp.init({
+        apiKey: '<%= @apiKey %>',
+        shopOrigin: 'https://<%= @shopurl %>'
+      });
+    </script>
+    <% end %>
+
   </head>
   <body>
     <div class="container">
